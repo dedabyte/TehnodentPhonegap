@@ -1,0 +1,114 @@
+$colorTDzelena: #52A978;
+$colorTDzelena2: lighten($colorTDzelena, 15%);
+$colorTDzelena3: darken($colorTDzelena, 15%);
+$colorTDplava: #236AA0;
+$colorTDplava2: lighten($colorTDplava, 15%);
+$colorTDplava3: darken($colorTDplava, 15%);
+
+$colorTDplavaS1: $colorTDplava;
+$colorTDplavaS2:lighten($colorTDplavaS1, 15%);
+$colorTDplavaS3:lighten($colorTDplavaS2, 15%);
+
+$colorAccent: #FFA800;
+$colorAccent2: lighten($colorAccent, 15%);
+$colorAccent3: darken($colorAccent, 15%);
+
+$colorTDAkcija: #FE5a5a;
+$colorTDAkcija2: lighten($colorTDAkcija, 10%);
+$colorTDAkcija3: darken($colorTDAkcija, 10%);
+
+$colorBorder: #e2e2e2;
+
+$colorFont: #555555;
+$colorFont2: #8a8a8a;
+
+$fontFamily: "Ubuntu", Arial, sans-serif !important;
+$fontWeightNormal: 400;
+$fontWeightLight: 300;
+$fontWeightBold: 500;
+
+$shadowMenu: rgba(0,0,0,0.5);
+
+
+html, body, .app-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-family: $fontFamily;
+  color: $colorFont;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.header {
+  position: relative;
+  height: 56px;
+  background-color: $colorTDplava;
+}
+
+.content {
+  position: relative;
+  height: calc(100% - 56px);
+  overflow: auto;
+}
+
+.td-catalog {
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
+
+.td-catalog-item {
+  padding: 16px;
+  border-bottom: 1px solid $colorBorder;
+  overflow: auto;
+
+  .item-image {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .item-data {
+    float: right;
+    width: calc(100% - 100px);
+
+    p {
+      margin: 0 0 8px 16px;
+    }
+
+    .item-title {
+      font-weight: $fontWeightBold;
+      font-size: 14px;
+
+      i {
+        font-style: normal;
+        font-weight: $fontWeightNormal;
+      }
+    }
+
+    .item-price {
+      font-weight: $fontWeightBold;
+      font-size: 14px;
+      color: $colorTDplava;
+
+      .previous-price {
+        font-weight: $fontWeightNormal;
+        color: $colorFont;
+        text-decoration: line-through;
+        font-size: 13px;
+      }
+
+      .new-price {
+        color: $colorAccent;
+      }
+    }
+  }
+}

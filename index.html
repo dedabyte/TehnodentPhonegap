@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TehnodentApp</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300,500&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  <link href="style/style.css" rel="stylesheet"/>
+
+  <script src="lib/lodash.min.js"></script>
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/restangular.min.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+</head>
+<body ng-app="app">
+<div class="app-wrapper">
+  <div class="header"></div>
+  <div class="content" ui-view="content"></div>
+</div>
+
+<script src="app/app.js"></script>
+<script src="app/tree/tree-service.js"></script>
+<script src="app/catalog/catalog-service.js"></script>
+<script src="app/catalog/catalog-component.js"></script>
+<script src="app/catalog/catalog-item/catalog-item-component.js"></script>
+</body>
+</html>

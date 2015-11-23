@@ -1,0 +1,13 @@
+<div class="item-image" style="background-image: url({{:: tdCatalogItem.getThumb()}})"></div>
+<div class="item-data">
+  <p class="item-title">
+    <span ng-bind=":: tdCatalogItem.item.naziv"></span> - <i ng-bind=":: tdCatalogItem.item.proizvodjac"></i>
+  </p>
+  <p ng-show=":: !tdCatalogItem.item.akcijskaCena" class="item-price">
+    <span ng-bind=":: tdCatalogItem.formatPrice('mpCena')"></span>
+  </p>
+  <p ng-show=":: tdCatalogItem.item.akcijskaCena" class="item-price">
+    <span class="previous-price" ng-bind=":: tdCatalogItem.formatPrice('mpCena')"></span>
+    <span class="new-price" ng-bind=":: tdCatalogItem.formatPrice('akcijskaCena')"></span>
+  </p>
+</div>

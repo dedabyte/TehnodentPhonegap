@@ -1,0 +1,62 @@
+html, body, .app-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-family: "Ubuntu", Arial, sans-serif !important;
+  color: #555555; }
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+.header {
+  position: relative;
+  height: 56px;
+  background-color: #236AA0; }
+
+.content {
+  position: relative;
+  height: calc(100% - 56px);
+  overflow: auto; }
+
+.td-catalog {
+  position: relative;
+  height: 100%;
+  overflow: auto; }
+
+.td-catalog-item {
+  padding: 16px;
+  border-bottom: 1px solid #e2e2e2;
+  overflow: auto; }
+  .td-catalog-item .item-image {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .td-catalog-item .item-data {
+    float: right;
+    width: calc(100% - 100px); }
+    .td-catalog-item .item-data p {
+      margin: 0 0 8px 16px; }
+    .td-catalog-item .item-data .item-title {
+      font-weight: 500;
+      font-size: 14px; }
+      .td-catalog-item .item-data .item-title i {
+        font-style: normal;
+        font-weight: 400; }
+    .td-catalog-item .item-data .item-price {
+      font-weight: 500;
+      font-size: 14px;
+      color: #236AA0; }
+      .td-catalog-item .item-data .item-price .previous-price {
+        font-weight: 400;
+        color: #555555;
+        text-decoration: line-through;
+        font-size: 13px; }
+      .td-catalog-item .item-data .item-price .new-price {
+        color: #FFA800; }
+
+/*# sourceMappingURL=style.css.map */
