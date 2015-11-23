@@ -14,6 +14,8 @@
       var promise = Restangular.one('katalog/home').get();
       promise.then(function(response){
         tree = response.stablo;
+      }, function(error){
+        $('.content').html(error.toString());
       });
       return promise;
     }
