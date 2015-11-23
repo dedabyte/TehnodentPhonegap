@@ -15,7 +15,7 @@
       promise.then(function(response){
         tree = response.stablo;
       }, function(error){
-        $('.content').html(error.toString());
+        $('.content').html(JSON.stringify(error.plain(), null, 4));
       });
       return promise;
     }
