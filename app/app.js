@@ -20,6 +20,11 @@
 
     $stateProvider.state('main', {
       abstract: true,
+      views: {
+        'sidenav@': {
+          template: '<div td-sidenav class="td-sidenav"></div>'
+        }
+      },
       resolve: {
         tree: function(TreeService){
           return TreeService.fetchTree();
@@ -32,9 +37,6 @@
       views: {
         'content@': {
           template: '<div td-catalog class="td-catalog"></div>'
-        },
-        'sidenav@': {
-          template: '<div td-sidenav class="td-sidenav"></div>'
         }
       },
       resolve: {
@@ -56,6 +58,14 @@
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams, error){
 
     });
+
+    document.addEventListener("deviceready", function (){
+      document.addEventListener('backbutton', function(e){
+        e.preventDefault();
+        navigator.app.exitApp();
+      }, false);
+    }, false);
+    
   });
 
   function toNumberFormat(n, decimals, decimal_sep, thousands_sep){

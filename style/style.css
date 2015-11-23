@@ -118,5 +118,82 @@ p, h1, h2, h3, h4, h5, h6 {
   100% {
     opacity: 0;
     left: -80%; } }
+#stablo ul {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  display: none; }
+#stablo > ul {
+  border-left: 1px solid #e2e2e2;
+  border-right: 1px solid #e2e2e2; }
+#stablo li {
+  position: relative;
+  list-style: none;
+  cursor: default;
+  background-color: white;
+  font-weight: 400;
+  transition: margin 200ms;
+  border-bottom: 1px solid #e2e2e2; }
+  #stablo li:hover, #stablo li.active {
+    background-color: #f0f0f9; }
+  #stablo li a:hover, #stablo li.active > span {
+    color: #3b92d4; }
+    #stablo li a:hover > a, #stablo li.active > span > a {
+      color: #3b92d4; }
+  #stablo li a:hover {
+    text-decoration: underline; }
+  #stablo li > span {
+    position: relative;
+    display: inline-block; }
+  #stablo li a {
+    position: relative;
+    padding: 10px 0;
+    display: inline-block;
+    color: #555555;
+    text-decoration: none; }
+  #stablo li.imaPodstablo {
+    cursor: pointer; }
+    #stablo li.imaPodstablo > ul {
+      border-top: 1px solid #e2e2e2; }
+  #stablo li.imaPodstablo > span:after {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 10px;
+    position: absolute;
+    top: calc(50% - 5px);
+    left: -15px;
+    content: "\f067"; }
+  #stablo li.imaPodstablo.otvoreno > span:after {
+    content: "\f068"; }
+  #stablo li.imaPodstablo.otvoreno {
+    border-bottom: none; }
+  #stablo li.nivo-0 {
+    background-color: #236AA0; }
+    #stablo li.nivo-0 > span {
+      color: white; }
+      #stablo li.nivo-0 > span > a {
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px; }
+    #stablo li.nivo-0:hover, #stablo li.nivo-0.active {
+      background-color: #236AA0; }
+  #stablo li.nivo-1 {
+    background-color: #3b92d4; }
+    #stablo li.nivo-1 > span {
+      color: white; }
+      #stablo li.nivo-1 > span > a {
+        color: white;
+        padding-top: 15px;
+        padding-bottom: 15px; }
+    #stablo li.nivo-1:hover, #stablo li.nivo-1.active {
+      background-color: #7ab5e2; }
+#stablo > ul {
+  display: block; }
+#stablo > ul > li > span > a {
+  text-transform: uppercase;
+  font-size: 15px; }
 
 /*# sourceMappingURL=style.css.map */

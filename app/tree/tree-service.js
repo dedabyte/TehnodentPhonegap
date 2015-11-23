@@ -15,6 +15,7 @@
       var promise = Restangular.one('katalog/home').get();
       promise.then(function(response){
         tree = response.stablo;
+        addLevelsToTree(tree)
       }, function(error){
         $('.content').html(JSON.stringify(error, null, 4));
       });
@@ -23,6 +24,24 @@
 
     function getTree(){
       return tree;
+    }
+
+    function addLevelsToTree(arr){
+      var level = 0;
+
+      var addLevel = function(arr){
+        arr.forEach(function(a){
+          a._level = level;
+          if(a.podstablo.length){
+            level++;
+            addLevel(a.podstablo);
+            level--;
+          }
+        });
+      };
+
+      addLevel(arr);
+
     }
 
     self.fetchTree = fetchTree;

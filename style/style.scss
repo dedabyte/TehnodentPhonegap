@@ -198,3 +198,170 @@ p, h1, h2, h3, h4, h5, h6 {
     left: -80%;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#stablo {
+  //margin-top: 20px;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    display: none;
+  }
+
+  > ul {
+    border-left: 1px solid $colorBorder;
+    border-right: 1px solid $colorBorder;
+  }
+
+  li {
+    position: relative;
+    list-style: none;
+    //cursor: pointer;
+    cursor: default;
+    background-color: white;
+    font-weight: $fontWeightNormal;
+    transition: margin 200ms;
+    border-bottom: 1px solid $colorBorder;
+
+    &:hover,
+    &.active {
+      background-color: #f0f0f9;
+    }
+
+    a:hover,
+    &.active > span {
+      color: $colorTDplava2;
+
+      > a {
+        color: $colorTDplava2;
+      }
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    > span {
+      position: relative;
+      display: inline-block;
+    }
+
+    a {
+      position: relative;
+      //padding: 4px 20px 4px 16px;
+      padding: 10px 0;
+      display: inline-block;
+      color: $colorFont;
+      text-decoration: none;
+    }
+
+    small {
+      //            position: absolute;
+      //            top: 7px;
+      //            right: 3px;
+    }
+
+    &.imaPodstablo {
+      cursor: pointer;
+
+      & > ul {
+        border-top: 1px solid $colorBorder;
+      }
+    }
+
+    &.imaPodstablo > span:after {
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 10px;
+
+      position: absolute;
+      //top: 8px;
+      top: calc(50% - 5px);
+      left: -15px;
+      content: "\f067";
+      //color: #888;
+    }
+
+    &.imaPodstablo.otvoreno > span:after {
+      content: "\f068";
+    }
+
+    &.imaPodstablo.otvoreno {
+      //margin-top: 6px;
+      border-bottom: none;
+    }
+
+
+
+    &.nivo-0 {
+      //background-color: #333;
+      //background-color: $colorTDzelena;
+      background-color: $colorTDplavaS1;
+      > span {
+        color: white;
+
+        > a {
+          color: white;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+      }
+      &:hover,
+      &.active {
+        //background-color: lighten(#333, 15%);
+        //background-color: lighten($colorTDzelena, 15%);
+        background-color: $colorTDplavaS1;
+      }
+    }
+    &.nivo-1 {
+      background-color: $colorTDplavaS2;
+      > span {
+        color: white;
+
+        > a {
+          color: white;
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+      }
+      &:hover,
+      &.active {
+        background-color: $colorTDplavaS3;
+      }
+    }
+
+  }
+
+  & > ul {
+    display: block;
+    //margin-top: 20px;
+  }
+
+  & > ul > li > span > a {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+
+}
