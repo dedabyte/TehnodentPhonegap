@@ -50,6 +50,12 @@
     $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error){
       console.log(error);
     });
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams, error){
+
+    });
+    $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams, error){
+
+    });
   });
 
   function toNumberFormat(n, decimals, decimal_sep, thousands_sep){
