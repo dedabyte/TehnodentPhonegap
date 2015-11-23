@@ -117,6 +117,15 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.sidenav-trigger {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+}
+
 .sidenav-overlay {
   position: fixed;
   z-index: 100;

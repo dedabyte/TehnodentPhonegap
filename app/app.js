@@ -3,6 +3,7 @@
   'use strict';
 
   var app = angular.module('app', [
+    'ngTouch',
     'ngAnimate',
     'ui.router',
     'restangular'

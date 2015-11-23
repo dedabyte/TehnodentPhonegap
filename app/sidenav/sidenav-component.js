@@ -19,7 +19,13 @@
           self.active.show = false;
         }
 
+        function openNav(){
+          self.active.show = true;
+          self.active.loaded = true;
+        }
+
         self.closeNav = closeNav;
+        self.openNav = openNav;
 
 
 
