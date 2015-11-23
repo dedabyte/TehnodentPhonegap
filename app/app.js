@@ -58,14 +58,6 @@
     $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams, error){
 
     });
-
-    document.addEventListener("deviceready", function (){
-      document.addEventListener('backbutton', function(e){
-        e.preventDefault();
-        navigator.app.exitApp();
-      }, false);
-    }, false);
-    
   });
 
   function toNumberFormat(n, decimals, decimal_sep, thousands_sep){
@@ -79,5 +71,12 @@
     return sign + (j ? i.substr(0, j) + t : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : '');
   }
   window.toNumberFormat = toNumberFormat;
+
+  document.addEventListener('deviceready', function (){
+    document.addEventListener('backbutton', function(e){
+      e.preventDefault();
+      navigator.app.exitApp();
+    }, false);
+  }, false);
 
 })();
