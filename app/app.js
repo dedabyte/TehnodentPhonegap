@@ -3,6 +3,7 @@
   'use strict';
 
   var app = angular.module('app', [
+    'ngAnimate',
     'ui.router',
     'restangular'
   ]);
@@ -31,6 +32,9 @@
       views: {
         'content@': {
           template: '<div td-catalog class="td-catalog"></div>'
+        },
+        'sidenav@': {
+          template: '<div td-sidenav class="td-sidenav"></div>'
         }
       },
       resolve: {

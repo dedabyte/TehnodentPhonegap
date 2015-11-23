@@ -1,0 +1,17 @@
+<div class="sidenav-overlay animation-sidenav" ng-show="tdSidenav.active.show" ng-class="{ hidden: !tdSidenav.active.loaded }" ng-click="tdSidenav.closeNav()">
+  <div class="sidenav-wrap">
+
+    <ul>
+      <li ng-repeat="item in :: tdSidenav.tree" ng-include="'categoryTree'"></li>
+    </ul>
+
+  </div>
+</div>
+
+<script type="text/ng-template" id="categoryTree">
+  <a href="#/{{:: item.url}}" ng-bind=":: item.naziv"></a>
+  <ul ng-if=":: item.podstablo.length">
+    <li ng-repeat="item in :: item.podstablo" ng-include="'categoryTree'"></li>
+  </ul>
+</script>
+

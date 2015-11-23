@@ -9,6 +9,7 @@
   function TreeService(Restangular){
     var self = this;
     var tree = [];
+    var active = { show: false, loaded: false };
 
     function fetchTree(){
       var promise = Restangular.one('katalog/home').get();
@@ -26,6 +27,7 @@
 
     self.fetchTree = fetchTree;
     self.getTree = getTree;
+    self.active = active;
 
   }
 
