@@ -37,6 +37,7 @@ html, body, .app-wrapper {
   font-size: 13px;
   font-family: $fontFamily;
   color: $colorFont;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -163,38 +164,42 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @keyframes sidenavOverlayIn {
   0% {
-    opacity: 0;
+    //opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
   }
   100% {
-    opacity: 1;
+    //opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 @keyframes sidenavWrapIn {
   0% {
-    opacity: 0;
+    //opacity: 0;
     left: -80%;
   }
   100% {
-    opacity: 1;
+    //opacity: 1;
     left: 0%;
   }
 }
 
 @keyframes sidenavOverlayOut {
   0% {
-    opacity: 1;
+    //opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   100% {
-    opacity: 0;
+    //opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 @keyframes sidenavWrapOut {
   0% {
-    opacity: 1;
+    //opacity: 1;
     left: 0%;
   }
   100% {
-    opacity: 0;
+    //opacity: 0;
     left: -80%;
   }
 }
@@ -243,21 +248,16 @@ p, h1, h2, h3, h4, h5, h6 {
     transition: margin 200ms;
     border-bottom: 1px solid $colorBorder;
 
-    &:hover,
     &.active {
       background-color: #f0f0f9;
     }
 
-    a:hover,
     &.active > span {
       color: $colorTDplava2;
 
       > a {
         color: $colorTDplava2;
       }
-    }
-    a:hover {
-      text-decoration: underline;
     }
 
     > span {
@@ -328,7 +328,6 @@ p, h1, h2, h3, h4, h5, h6 {
           padding-bottom: 20px;
         }
       }
-      &:hover,
       &.active {
         //background-color: lighten(#333, 15%);
         //background-color: lighten($colorTDzelena, 15%);
@@ -346,7 +345,6 @@ p, h1, h2, h3, h4, h5, h6 {
           padding-bottom: 15px;
         }
       }
-      &:hover,
       &.active {
         background-color: $colorTDplavaS3;
       }

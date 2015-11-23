@@ -37,7 +37,7 @@
           elementHeight = $element.height();
           itemsWrapHeight = itemsWrap.height();
 
-          if($element.scrollTop() + elementHeight + 100 >= itemsWrapHeight){
+          if($element.scrollTop() + elementHeight + 600 >= itemsWrapHeight){
             loadInProgress = true;
             $scope.$evalAsync(function(){
               page++;

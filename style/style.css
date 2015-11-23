@@ -5,7 +5,8 @@ html, body, .app-wrapper {
   padding: 0;
   font-size: 13px;
   font-family: "Ubuntu", Arial, sans-serif !important;
-  color: #555555; }
+  color: #555555;
+  -webkit-tap-highlight-color: transparent; }
 
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0; }
@@ -96,27 +97,23 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @keyframes sidenavOverlayIn {
   0% {
-    opacity: 0; }
+    background-color: transparent; }
   100% {
-    opacity: 1; } }
+    background-color: rgba(0, 0, 0, 0.5); } }
 @keyframes sidenavWrapIn {
   0% {
-    opacity: 0;
     left: -80%; }
   100% {
-    opacity: 1;
     left: 0%; } }
 @keyframes sidenavOverlayOut {
   0% {
-    opacity: 1; }
+    background-color: rgba(0, 0, 0, 0.5); }
   100% {
-    opacity: 0; } }
+    background-color: transparent; } }
 @keyframes sidenavWrapOut {
   0% {
-    opacity: 1;
     left: 0%; }
   100% {
-    opacity: 0;
     left: -80%; } }
 #stablo ul {
   padding: 0;
@@ -134,14 +131,12 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   transition: margin 200ms;
   border-bottom: 1px solid #e2e2e2; }
-  #stablo li:hover, #stablo li.active {
+  #stablo li.active {
     background-color: #f0f0f9; }
-  #stablo li a:hover, #stablo li.active > span {
+  #stablo li.active > span {
     color: #3b92d4; }
-    #stablo li a:hover > a, #stablo li.active > span > a {
+    #stablo li.active > span > a {
       color: #3b92d4; }
-  #stablo li a:hover {
-    text-decoration: underline; }
   #stablo li > span {
     position: relative;
     display: inline-block; }
@@ -178,7 +173,7 @@ p, h1, h2, h3, h4, h5, h6 {
         color: white;
         padding-top: 20px;
         padding-bottom: 20px; }
-    #stablo li.nivo-0:hover, #stablo li.nivo-0.active {
+    #stablo li.nivo-0.active {
       background-color: #236AA0; }
   #stablo li.nivo-1 {
     background-color: #3b92d4; }
@@ -188,7 +183,7 @@ p, h1, h2, h3, h4, h5, h6 {
         color: white;
         padding-top: 15px;
         padding-bottom: 15px; }
-    #stablo li.nivo-1:hover, #stablo li.nivo-1.active {
+    #stablo li.nivo-1.active {
       background-color: #7ab5e2; }
 #stablo > ul {
   display: block; }
