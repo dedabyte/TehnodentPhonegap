@@ -147,7 +147,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .animation-sidenav.ng-hide-remove {
-  animation: 0.3s sidenavOverlayIn ease;
+  animation: 0.3s;
 
   .sidenav-wrap {
     animation: 0.3s sidenavWrapIn ease;
@@ -155,7 +155,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .animation-sidenav.ng-hide-add {
-  animation: 0.2s sidenavOverlayOut ease;
+  animation: 0.2s;
 
   .sidenav-wrap {
     animation: 0.2s sidenavWrapOut ease;

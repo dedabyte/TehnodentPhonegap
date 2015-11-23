@@ -86,12 +86,12 @@ p, h1, h2, h3, h4, h5, h6 {
     padding-left: 15px; }
 
 .animation-sidenav.ng-hide-remove {
-  animation: 0.3s sidenavOverlayIn ease; }
+  animation: 0.3s; }
   .animation-sidenav.ng-hide-remove .sidenav-wrap {
     animation: 0.3s sidenavWrapIn ease; }
 
 .animation-sidenav.ng-hide-add {
-  animation: 0.2s sidenavOverlayOut ease; }
+  animation: 0.2s; }
   .animation-sidenav.ng-hide-add .sidenav-wrap {
     animation: 0.2s sidenavWrapOut ease; }
 
